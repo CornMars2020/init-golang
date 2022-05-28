@@ -20,7 +20,7 @@ func (ins *ExampleDB) GetConfig(serviceID string) (ExampleSettings, error) {
 	var config ExampleSettings
 
 	ins.MarketDB.GetConnection().
-		Table("grid_orders_configs").
+		Table("example").
 		Where("service_id = ?", serviceID).
 		First(&config)
 
