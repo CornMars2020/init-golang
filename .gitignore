@@ -1,0 +1,11 @@
+.vscode
+mysql
+redis
+bin
+.envrc
+etc/config.yaml
+**/logs/*.log
+# *.sh
+.idea
+
+pprof

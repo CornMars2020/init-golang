@@ -1,0 +1,47 @@
+## MySQL 数据库配置
+mysql:
+  username: "root"
+  password: "123456"
+  host: "127.0.0.1"
+  port: 3306
+  dbname: "market"
+  connections: 300
+
+## 平台服务配置
+marketapi:
+  ## Spot 现货
+  spot:
+    pub_url: ""
+    priv_url: ""
+  ## 交割合约
+  futures:
+    pub_url: ""
+    priv_url: ""
+  ## 永续合约 单仓位
+  swap:
+    pub_url: ""
+    priv_url: ""
+  ## 高频缓存数据接口
+  cache:
+    pub_url: ""
+    priv_url: ""
+  ## 特殊
+  extra:
+    pub_url: ""
+    is_pub_cache: 0
+    priv_url: ""
+    is_priv_cache: 0
+
+logger:
+  path: "./logs/"
+  file_rotate_mode: "hour" # minute:分钟分割(一般做测试用), hour:小时分割, day:天分割, "":不分割
+  time_format: "2006-01-02 15:04:05.000"
+  is_hide_key: true
+  is_color: false
+  is_fields_order: false
+
+monitor:
+  address: "0.0.0.0:9090"
+  host: ""
+  port: ""
+  error_details: true
